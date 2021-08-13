@@ -16,4 +16,25 @@
     在遍历时通过这两个标志让单词之间间隔时间设置长度不一样通过style的setProperty添加delay长度
     
 3. mouse-out transition
- 
+    初始化， html block-size和inline-size设置为100%
+    影响块元素和行内元素的width和height，具体取决于writing-mode
+
+    body设置min-block-size和min-inline-size为100%，
+    并设置margin和box-sizing为border-box
+
+    display为grid 
+    place-content(justify-content和align-content)为center
+    居中
+
+    media查询 orientation 为landscape
+    body grid-auto-flow为column ?
+
+    设置h1 before伪元素
+    设置成BFC
+    top right bottom left都为0让无宽高的盒子填满整个父容器
+    insets无阴影
+    z-index：-1在后一层
+
+    设置h1伪类hover时before伪元素
+    transform scaleX在X轴伸展 两侧
+    transform-origin bottom left从左下角开始伸展
