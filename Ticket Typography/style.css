@@ -1,0 +1,199 @@
+:root {
+  --background-color: #e0dbd5;
+  --background-text-color: #f3f3f3;
+  --dark-font-color: #333;
+  --body-background-from: #d8d8d8;
+  --body-background-to: #c9c9c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  position: relative;
+  background-color: var(--body-background-from);
+  background: rgb(216, 216, 216);
+  background: -moz-radial-gradient(
+    circle,
+    var(--body-background-from) 0%,
+    var(--body-background-to) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    var(--body-background-from) 0%,
+    var(--body-background-to) 200%
+  );
+  background: radial-gradient(
+    circle,
+    var(--body-background-from) 0%,
+    var(--body-background-to) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--body-background-from)", endColorstr="var(--body-background-to)", GradientType=1);
+}
+
+/* TEXT ELEMENTS */
+#ticket-background-container h1 {
+  font-size: 90px;
+  text-align: end;
+  text-align: center;
+}
+
+p {
+  margin-top: 2px 0;
+  font-weight: 200;
+}
+
+/* BACKGROND */
+#ticket-background-container {
+  position: absolute;
+  background-color: var(--background-color);
+  width: 500px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  color: var(--background-text-color);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#left-part {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 4fr 2fr;
+}
+
+#right-part {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 2fr 4fr;
+}
+
+
+.divider {
+  height: 10px;
+  width: 80%;
+  background-color: var(--background-text-color);
+}
+
+
+#left-top, 
+#left-bottom, 
+#right-top, 
+#right-bottom {
+  display: flex;
+}
+
+#left-top, 
+#left-bottom {
+  justify-content: flex-start;
+}
+
+#left-bottom {
+  align-items: flex-start;
+}
+
+#right-top,
+#right-bottom  {
+  justify-content: flex-end;
+}
+
+#right-top {
+  align-items: flex-end;
+}
+
+
+/* MAIN CONTAONER */
+#ticket-main-container {
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  padding: 10px;
+}
+
+#main-left,
+#main-center,
+#main-center-top,
+#main-center-bottom,
+#decoration {
+  display: flex;
+}
+
+#main-left {
+  max-height: 100%;
+  flex-direction: column;
+}
+
+#main-left h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+
+#main-center {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main-center-top {
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-center-top p {
+  font-size: 20px;
+}
+
+#main-center-bottom {
+  align-items: center;
+  justify-content: space-between;
+}
+
+#number {
+  font-size: 10px;
+  margin: 0 10px;
+}
+
+img {
+  height: 20px;
+  object-fit: contain;
+  object-position: left;
+}
+
+/* DECORA LINE */
+#decoration {
+  width: 280px;
+  height: 200px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#decoration-top,
+#decoration-bottom {
+  width: 100%;
+  border-right: 10px solid black;
+}
+#decoration-top {
+  height: 30px;
+}
+
+#decoration-bottom {
+  height: 40px;
+}
